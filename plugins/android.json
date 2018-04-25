@@ -1,0 +1,40 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-netease-im": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        }
+    }
+}

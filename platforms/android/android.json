@@ -1,0 +1,209 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NIMPlugin\"><param name=\"android-package\" value=\"com.netease.nim.NIMPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "application": [
+                        {
+                            "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"android.support.v4.content.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/provider_paths\" /></provider>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<meta-data android:name=\"com.netease.nim.appKey\" android:value=\"91edf0ebde8828cbfa8a6b1502adc8a1\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.netease.nimlib.service.NimService\" android:process=\":core\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.netease.nimlib.service.NimService$Aux\" android:process=\":core\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:exported=\"false\" android:name=\"com.netease.nimlib.service.NimReceiver\" android:process=\":core\"><intent-filter><action android:name=\"android.intent.action.BOOT_COMPLETED\" /><action android:name=\"android.net.conn.CONNECTIVITY_CHANGE\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.netease.nimlib.service.ResponseReceiver\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.netease.nimlib.service.ResponseService\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        },
+        "cordova-plugin-netease-im": {
+            "PACKAGE_NAME": "com.ionicframework.nim"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+            "id": "cordova-plugin-camera.Camera",
+            "clobbers": [
+                "Camera"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+            "id": "cordova-plugin-camera.CameraPopoverOptions",
+            "clobbers": [
+                "CameraPopoverOptions"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/Camera.js",
+            "id": "cordova-plugin-camera.camera",
+            "clobbers": [
+                "navigator.camera"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+            "id": "cordova-plugin-camera.CameraPopoverHandle",
+            "clobbers": [
+                "CameraPopoverHandle"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+            "id": "ionic-plugin-keyboard.keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ],
+            "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-netease-im/www/NIMPlugin.js",
+            "id": "cordova-plugin-netease-im.NIMPlugin",
+            "clobbers": [
+                "NIMPlugin"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-compat": "1.1.0",
+        "cordova-plugin-camera": "2.4.0",
+        "cordova-plugin-console": "1.0.6",
+        "cordova-plugin-device": "1.1.5",
+        "cordova-plugin-splashscreen": "4.0.2",
+        "cordova-plugin-statusbar": "2.2.2",
+        "cordova-plugin-whitelist": "1.3.2",
+        "ionic-plugin-keyboard": "2.2.1",
+        "cordova-plugin-netease-im": "1.0.0"
+    }
+}
